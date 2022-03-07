@@ -26,6 +26,12 @@ public class MenuUIHandler : MonoBehaviour
         }
     }
 
+    public void ClearHighScore()
+    {
+        MainManager.Instance.ClearHighScore();
+        BestScoreText.text = "Best Score:  - ";
+    }
+
     public void QuitGame()
     {
 #if UNITY_EDITOR

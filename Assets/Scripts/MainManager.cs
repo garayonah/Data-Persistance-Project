@@ -55,4 +55,16 @@ public class MainManager : MonoBehaviour
         }
 
     }
+
+    public void ClearHighScore()
+    {
+        string path = Application.persistentDataPath + "/savefile.json";
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+        HighScore = 0;
+        HighScoreName = "";
+
+    }
 }
