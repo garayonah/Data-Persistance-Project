@@ -14,6 +14,7 @@ public class MenuUIHandler : MonoBehaviour
     public void Start()
     {
         BestScoreText.text = "Best Score: " + MainManager.Instance.HighScoreName + " - " + MainManager.Instance.HighScore;
+        EnterNameText.text = MainManager.Instance.PlayerName;
     }
 
     public void StartGame()

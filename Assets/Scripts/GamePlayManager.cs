@@ -29,7 +29,9 @@ public class GamePlayManager : MonoBehaviour
         if (string.IsNullOrWhiteSpace(player_name)){
             player_name = "ANON";
         }
+        
         PlayerNameText.text = "Player: " + player_name;
+
         highscore = MainManager.Instance.HighScore;
         HighScoreText.text = "Best Score: " + MainManager.Instance.HighScoreName + " - " + highscore;
         const float step = 0.6f;
@@ -80,6 +82,11 @@ public class GamePlayManager : MonoBehaviour
     {
         m_Points += point;
         ScoreText.text = $"Score : {m_Points}";
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("startMenu");
     }
 
     public void GameOver()
